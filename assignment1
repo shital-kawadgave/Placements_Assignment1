@@ -1,0 +1,42 @@
+Write a program to print all numbers between 1 to n.
+
+#include<stdio.h>
+  
+int main()
+ {
+    int num, i, divSum, counter;
+  	printf("Enter a number\n");
+    scanf("%d", &num);
+  
+    for(counter = 1; counter <= num; counter++)
+	  {
+      	divSum = 0;
+        for (i = 1; i<= counter/2; i++) 
+		    {
+            if (counter % i == 0) 
+			      {
+                divSum += i;
+            }
+        }
+        if (divSum == counter)
+        {
+            printf("%d is a Perfect Number\n", counter);
+        }
+     }
+    return 0;
+  }
+  
+  Output:
+  Enter a number
+5000
+6 is a Perfect Number
+28 is a Perfect Number
+496 is a Perfect Number
+
+--------------------------------
+
+
+
+
+  
+  
